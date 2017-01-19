@@ -31,4 +31,7 @@ public class Notes implements Enumerable <Note>{
     public List<Note> getAll() {
         return noteList;
     }
+    public  Note get(int i){
+        return noteList.get(i);
+    }
 }

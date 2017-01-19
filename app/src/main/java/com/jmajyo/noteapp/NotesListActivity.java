@@ -1,17 +1,33 @@
 package com.jmajyo.noteapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.jmajyo.noteapp.model.Note;
+import com.jmajyo.noteapp.model.Notes;
+
 public class NotesListActivity extends AppCompatActivity {
+
+    Notes listOfNotes = new Notes();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_list);
+
+        NoteListFragment noteListFragment = (NoteListFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_note_list);
+
+        for (int i = 0; i < 20; i++) {
+            Note note = new Note("Note " + i);
+            note.setText("Noticia super importante " + i);
+            listOfNotes.add(note);
+        }
+        //creo el adaptador.
+        NoteAdapter adapter = new NoteAdapter(listOfNotes, this);
+        noteListFragment.setAdapter(adapter);
     }
 
 
