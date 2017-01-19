@@ -11,6 +11,7 @@
     tools:context="com.jmajyo.noteapp.NotesListActivity">
 
     <fragment
+        android:id="@+id/fragment_note_list"
         android:name="com.jmajyo.noteapp.NoteListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
