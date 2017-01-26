@@ -1,4 +1,4 @@
-package com.jmajyo.noteapp;
+package com.jmajyo.noteapp.fragments;
 
 
 import android.content.SharedPreferences;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import com.jmajyo.noteapp.R;
 
 
 /**

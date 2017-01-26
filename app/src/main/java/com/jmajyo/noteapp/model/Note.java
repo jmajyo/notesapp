@@ -1,9 +1,15 @@
 package com.jmajyo.noteapp.model;
 
-public class Note {
-    private String title;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
+public class Note extends RealmObject{
+    @PrimaryKey private String title;
     private String text;
     private long color;
+
+    public Note() {
+    }
 
     public Note(String title) {
         this.title = title;

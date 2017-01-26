@@ -1,9 +1,10 @@
-package com.jmajyo.noteapp;
+package com.jmajyo.noteapp.views;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jmajyo.noteapp.R;
 import com.jmajyo.noteapp.model.Note;
 
 public class NoteRowViewHolder extends RecyclerView.ViewHolder{

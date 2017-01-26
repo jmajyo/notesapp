@@ -1,7 +1,9 @@
-package com.jmajyo.noteapp;
+package com.jmajyo.noteapp.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.jmajyo.noteapp.R;
 
 public class noteDetailActivity extends AppCompatActivity {
 
