@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="#00F1C0">
+    android:background="#00F1C0"
+    android:layout_margin="5dp">
 
     <TextView
         android:id="@+id/row_note_note_title"

@@ -88,9 +88,20 @@ public class NotesListActivity extends AppCompatActivity {
             startActivityForResult(i,NEW_NOTE);
 
             return true;
+        }else if (id == R.id.menu_main_action_delete_all_note){
+            clearAllCities();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void clearAllCities() {
+        Realm realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        realm.delete(Note.class);
+        realm.commitTransaction();
+
+
     }
 
     @Override

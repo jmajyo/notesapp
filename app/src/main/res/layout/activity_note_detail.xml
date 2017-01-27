@@ -10,6 +10,7 @@
     tools:context="com.jmajyo.noteapp.activities.noteDetailActivity">
 
     <fragment
+        android:id="@+id/activity_note_detail___detail_fragment"
         android:name="com.jmajyo.noteapp.fragments.NoteDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

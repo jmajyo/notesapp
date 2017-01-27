@@ -1,9 +1,11 @@
 package com.jmajyo.noteapp.model;
 
+import java.io.Serializable;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-public class Note extends RealmObject{
+public class Note extends RealmObject implements Serializable{
     @PrimaryKey private String title;
     private String text;
     private long color;
