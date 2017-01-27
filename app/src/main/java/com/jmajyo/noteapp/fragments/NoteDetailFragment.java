@@ -1,4 +1,4 @@
-package com.jmajyo.noteapp;
+package com.jmajyo.noteapp.fragments;
 
 
 import android.content.SharedPreferences;
@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import com.jmajyo.noteapp.R;
+import com.jmajyo.noteapp.model.Note;
 
 
 /**
@@ -86,5 +89,12 @@ public class NoteDetailFragment extends Fragment {
         editor.putString("NOTE_DESCRIPTION",noteDescription);
         editor.apply();//graba los datos, si no lo pones no pasa los datos hasta pasado un tiempo
 
+    }
+
+    public Note getNote() {
+        Note note = new Note();
+        note.setTitle(titleText.getText().toString());
+        note.setText(descriptionText.getText().toString());
+        return note;
     }
 }
